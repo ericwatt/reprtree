@@ -19,3 +19,4 @@ Depends:
     tree,
     plotrix
 Enhances: randomForest
+RoxygenNote: 6.0.1

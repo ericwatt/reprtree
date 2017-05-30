@@ -7,10 +7,6 @@
 #' @param main The title to put on the graph
 #' @param ... Additional parameters to be passed to \code{text.tree}
 #' @export
-#' @examples
-#' library(randomForest)
-#' rforest <- randomForest(Species~., data=iris, ntree=20)
-#' plot.getTree(rforest, k=3, depth=4)
 plot.getTree <- function(rforest=NULL,tr=NULL,k=1, depth=0,main=NULL, ...){
   require(randomForest)
   if(is.null(rforest) && is.null(tr))stop('One of a random forest object or a tree object must be input')

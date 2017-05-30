@@ -7,11 +7,10 @@
 #' @param index The index of the reprtree object you want to plot
 #' @param all (logical) Do you want to create a panel of plots?
 #' @param depth The maximum depth of the tree to be plotted. \code{depth=0} means the full tree.
-#' @param adj 
+#' @param adj numeric
 #' @param main Title of plot (default is NULL)
 #' @param ... additional arguments to pass to text.tree. In particular, suppress node labels using \code{label=NULL}
 #' @export
-#' @S3method plot reprtree
 #' @section Details:
 #' This plot function takes a \code{reprtree} object, and then plots a 
 #' single representative tree or a sequence of representative trees (using \code{all=T}).
@@ -114,7 +113,6 @@ treepl <- function (xy, node, erase = FALSE, ...)
 
 #' Annotate a Tree Plot
 #' 
-#' @S3method text tree
 #' @description Add text to a tree plot. Modification of \code{tree:::text.tree} to add uniform type of tree.
 #' 
 #' @param x an object of class "tree"
@@ -134,7 +132,7 @@ treepl <- function (xy, node, erase = FALSE, ...)
 #' If the lettering is vertical (par srt = 90) and adj is not supplied it is adjusted appropriately.
 #' 
 #' @author Abhijit Dasgupta, modifying original code by B.D. Ripley
-#' @seealso \link{\code{plot.tree}}
+#' @seealso \code{\link{plot.tree}}
 text.tree <- function (x, splits = TRUE, label = "yval", all = FALSE, pretty = NULL, 
           digits = getOption("digits") - 3, adj = par("adj"), xpd = TRUE, uniform=T,
           ...) 
